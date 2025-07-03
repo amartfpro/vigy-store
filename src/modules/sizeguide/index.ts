@@ -1,22 +1,27 @@
-import { ModuleExports } from "@medusajs/types"
+import { Module } from "@medusajs/utils"
+import SizeguideService from "./service"
+import { Sizechart } from "./entities/sizechart"
+import { SizechartMeasurement } from "./entities/sizechart-measurement"
+import { SizechartRelevantMeasure } from "./entities/sizechart-relevant-measure"
+import { UserSize } from "./entities/usersize"
 
-export enum ModuleRegistrationName {
-  SIZEGUIDE = "sizeguide",
+export const SIZEGUIDE_MODULE = "sizeguide"
+
+export const linkableKeys = {
+  sizechart: `${SIZEGUIDE_MODULE}_sizechart`,
+  usersize: `${SIZEGUIDE_MODULE}_usersize`,
 }
 
-export const LinkableKeys = {
-  sizechart: ModuleRegistrationName.SIZEGUIDE + "_sizechart",
-  usersize: ModuleRegistrationName.SIZEGUIDE + "_usersize",
+const moduleDefinition: any = {
+  service: SizeguideService,
+  migrations: [],
+  models: [
+    Sizechart,
+    SizechartMeasurement,
+    SizechartRelevantMeasure,
+    UserSize,
+  ],
+  linkableKeys: () => linkableKeys,
 }
 
-export * from "./entities/sizechart"
-export * from "./entities/sizechart-measurement"
-export * from "./entities/sizechart-relevant-measure"
-export * from "./entities/usersize"
-
-const moduleDefinition = {
-  linkable: LinkableKeys,
-} as unknown as ModuleExports
-
-
-export default moduleDefinition
+export default Module(SIZEGUIDE_MODULE, moduleDefinition)

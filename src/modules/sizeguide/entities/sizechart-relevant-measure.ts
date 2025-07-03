@@ -6,18 +6,17 @@ import {
   ManyToOne,
   JoinColumn,
 } from "typeorm"
-import { Sizechart } from "./sizechart"
 
 @Entity()
 export class SizechartRelevantMeasure extends BaseEntity {
   @PrimaryGeneratedColumn("uuid")
   id: string
 
-  @ManyToOne(() => Sizechart, sizechart => sizechart.relevant_measures, {
+  @ManyToOne(() => require("./sizechart").Sizechart, (sizechart: any) => sizechart.relevant_measures, {
     onDelete: "CASCADE",
   })
   @JoinColumn({ name: "sizechart_id" })
-  sizechart: Sizechart
+  sizechart: any
 
   @Column()
   field_name: string

@@ -6,7 +6,6 @@ import {
   ManyToOne,
   JoinColumn,
 } from "typeorm"
-import { Sizechart } from "./sizechart"
 
 @Entity()
 export class SizechartMeasurement extends BaseEntity {
@@ -19,11 +18,11 @@ export class SizechartMeasurement extends BaseEntity {
   })
   size: "S" | "M" | "L" | "XL"
 
-  @ManyToOne(() => Sizechart, sizechart => sizechart.measurements, {
+  @ManyToOne(() => require("./sizechart").Sizechart, (sizechart: any) => sizechart.measurements, {
     onDelete: "CASCADE",
   })
   @JoinColumn({ name: "sizechart_id" })
-  sizechart: Sizechart
+  sizechart: any
 
   @Column({ nullable: true, type: "float" }) neck_girth: number
   @Column({ nullable: true, type: "float" }) shoulder_width: number
