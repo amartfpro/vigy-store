@@ -1,12 +1,11 @@
 import {
-  BaseEntity,
   Entity,
   PrimaryGeneratedColumn,
   Column,
 } from "typeorm"
 
-@Entity()
-export class UserSize extends BaseEntity {
+@Entity("user_size")
+export class UserSize {
   @PrimaryGeneratedColumn("uuid") id: string
   @Column({ nullable: true, type: "float" }) neck_girth: number
   @Column({ nullable: true, type: "float" }) shoulder_width: number

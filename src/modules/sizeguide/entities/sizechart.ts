@@ -1,5 +1,4 @@
 import {
-  BaseEntity,
   Entity,
   PrimaryGeneratedColumn,
   Column,
@@ -8,8 +7,8 @@ import {
 import { SizechartMeasurement } from "./sizechart-measurement"
 import { SizechartRelevantMeasure } from "./sizechart-relevant-measure"
 
-@Entity()
-export class Sizechart extends BaseEntity {
+@Entity("sizechart")
+export class Sizechart {
   @PrimaryGeneratedColumn("uuid")
   id: string
 

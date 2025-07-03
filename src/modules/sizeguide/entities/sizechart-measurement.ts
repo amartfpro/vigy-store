@@ -1,5 +1,4 @@
 import {
-  BaseEntity,
   Entity,
   PrimaryGeneratedColumn,
   Column,
@@ -7,8 +6,8 @@ import {
   JoinColumn,
 } from "typeorm"
 
-@Entity()
-export class SizechartMeasurement extends BaseEntity {
+@Entity("sizechart_measurement")
+export class SizechartMeasurement {
   @PrimaryGeneratedColumn("uuid")
   id: string
 
