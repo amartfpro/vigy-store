@@ -14,6 +14,9 @@ export * from "./entities/sizechart-measurement"
 export * from "./entities/sizechart-relevant-measure"
 export * from "./entities/usersize"
 
-const moduleDefinition: ModuleExports = {
-   getLinkableKeys: () => LinkableKeys,
-}
+const moduleDefinition = {
+  linkable: LinkableKeys,
+} as unknown as ModuleExports
+
+
+export default moduleDefinition
