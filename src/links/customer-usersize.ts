@@ -4,5 +4,5 @@ import SizeguideModule  from "../modules/sizeguide"
 
 export default defineLink(
   CustomerModule.linkable.customer,
-  SizeguideModule.linkable.userSize.id
+  SizeguideModule.linkable.userSize
 )
