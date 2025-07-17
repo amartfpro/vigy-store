@@ -1,9 +1,8 @@
 import { model } from "@medusajs/framework/utils"
 import { Sizechart } from "./sizechart"
 
-// 4. SizechartMeasure (many-to-one ↔ Sizechart.measures)
 export const SizechartMeasure = model
-  .define("sizechart_measure", {
+  .define("sizechart-measure", {
     id:   model.id().primaryKey(), 
     size: model.text(),
     neck_girth:      model.number().nullable(),

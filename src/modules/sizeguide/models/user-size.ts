@@ -1,7 +1,7 @@
 // src/modules/sizeguide/models/usersize.ts
 import { model } from "@medusajs/framework/utils"
 
-export const Usersize = model.define("usersize", {
+export const UserSize = model.define("user-size", {
   id:               model.id().primaryKey(),
   neck_girth:       model.number().nullable(),
   shoulder_width:   model.number().nullable(),

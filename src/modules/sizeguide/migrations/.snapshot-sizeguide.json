@@ -272,29 +272,29 @@
           "mappedType": "datetime"
         }
       },
-      "name": "sizechart_measure",
+      "name": "sizechart-measure",
       "schema": "public",
       "indexes": [
         {
-          "keyName": "IDX_sizechart_measure_sizechart_id",
+          "keyName": "IDX_sizechart-measure_sizechart_id",
           "columnNames": [],
           "composite": false,
           "constraint": false,
           "primary": false,
           "unique": false,
-          "expression": "CREATE INDEX IF NOT EXISTS \"IDX_sizechart_measure_sizechart_id\" ON \"sizechart_measure\" (sizechart_id) WHERE deleted_at IS NULL"
+          "expression": "CREATE INDEX IF NOT EXISTS \"IDX_sizechart-measure_sizechart_id\" ON \"sizechart-measure\" (sizechart_id) WHERE deleted_at IS NULL"
         },
         {
-          "keyName": "IDX_sizechart_measure_deleted_at",
+          "keyName": "IDX_sizechart-measure_deleted_at",
           "columnNames": [],
           "composite": false,
           "constraint": false,
           "primary": false,
           "unique": false,
-          "expression": "CREATE INDEX IF NOT EXISTS \"IDX_sizechart_measure_deleted_at\" ON \"sizechart_measure\" (deleted_at) WHERE deleted_at IS NULL"
+          "expression": "CREATE INDEX IF NOT EXISTS \"IDX_sizechart-measure_deleted_at\" ON \"sizechart-measure\" (deleted_at) WHERE deleted_at IS NULL"
         },
         {
-          "keyName": "sizechart_measure_pkey",
+          "keyName": "sizechart-measure_pkey",
           "columnNames": [
             "id"
           ],
@@ -306,12 +306,12 @@
       ],
       "checks": [],
       "foreignKeys": {
-        "sizechart_measure_sizechart_id_foreign": {
-          "constraintName": "sizechart_measure_sizechart_id_foreign",
+        "sizechart-measure_sizechart_id_foreign": {
+          "constraintName": "sizechart-measure_sizechart_id_foreign",
           "columnNames": [
             "sizechart_id"
           ],
-          "localTableName": "public.sizechart_measure",
+          "localTableName": "public.sizechart-measure",
           "referencedColumnNames": [
             "id"
           ],
@@ -383,29 +383,29 @@
           "mappedType": "datetime"
         }
       },
-      "name": "sizechart_relevant_measure",
+      "name": "sizechart-relevant-measure",
       "schema": "public",
       "indexes": [
         {
-          "keyName": "IDX_sizechart_relevant_measure_sizechart_id",
+          "keyName": "IDX_sizechart-relevant-measure_sizechart_id",
           "columnNames": [],
           "composite": false,
           "constraint": false,
           "primary": false,
           "unique": false,
-          "expression": "CREATE INDEX IF NOT EXISTS \"IDX_sizechart_relevant_measure_sizechart_id\" ON \"sizechart_relevant_measure\" (sizechart_id) WHERE deleted_at IS NULL"
+          "expression": "CREATE INDEX IF NOT EXISTS \"IDX_sizechart-relevant-measure_sizechart_id\" ON \"sizechart-relevant-measure\" (sizechart_id) WHERE deleted_at IS NULL"
         },
         {
-          "keyName": "IDX_sizechart_relevant_measure_deleted_at",
+          "keyName": "IDX_sizechart-relevant-measure_deleted_at",
           "columnNames": [],
           "composite": false,
           "constraint": false,
           "primary": false,
           "unique": false,
-          "expression": "CREATE INDEX IF NOT EXISTS \"IDX_sizechart_relevant_measure_deleted_at\" ON \"sizechart_relevant_measure\" (deleted_at) WHERE deleted_at IS NULL"
+          "expression": "CREATE INDEX IF NOT EXISTS \"IDX_sizechart-relevant-measure_deleted_at\" ON \"sizechart-relevant-measure\" (deleted_at) WHERE deleted_at IS NULL"
         },
         {
-          "keyName": "sizechart_relevant_measure_pkey",
+          "keyName": "sizechart-relevant-measure_pkey",
           "columnNames": [
             "id"
           ],
@@ -417,12 +417,12 @@
       ],
       "checks": [],
       "foreignKeys": {
-        "sizechart_relevant_measure_sizechart_id_foreign": {
-          "constraintName": "sizechart_relevant_measure_sizechart_id_foreign",
+        "sizechart-relevant-measure_sizechart_id_foreign": {
+          "constraintName": "sizechart-relevant-measure_sizechart_id_foreign",
           "columnNames": [
             "sizechart_id"
           ],
-          "localTableName": "public.sizechart_relevant_measure",
+          "localTableName": "public.sizechart-relevant-measure",
           "referencedColumnNames": [
             "id"
           ],
@@ -593,20 +593,20 @@
           "mappedType": "datetime"
         }
       },
-      "name": "usersize",
+      "name": "user-size",
       "schema": "public",
       "indexes": [
         {
-          "keyName": "IDX_usersize_deleted_at",
+          "keyName": "IDX_user-size_deleted_at",
           "columnNames": [],
           "composite": false,
           "constraint": false,
           "primary": false,
           "unique": false,
-          "expression": "CREATE INDEX IF NOT EXISTS \"IDX_usersize_deleted_at\" ON \"usersize\" (deleted_at) WHERE deleted_at IS NULL"
+          "expression": "CREATE INDEX IF NOT EXISTS \"IDX_user-size_deleted_at\" ON \"user-size\" (deleted_at) WHERE deleted_at IS NULL"
         },
         {
-          "keyName": "usersize_pkey",
+          "keyName": "user-size_pkey",
           "columnNames": [
             "id"
           ],

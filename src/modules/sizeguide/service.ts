@@ -1,12 +1,12 @@
 import { MedusaService } from "@medusajs/framework/utils"
-import { Sizechart } from "./entities/sizechart"
-import { SizechartMeasurement } from "./entities/sizechart-measurement"
-import { SizechartRelevantMeasure } from "./entities/sizechart-relevant-measure"
-import { UserSize } from "./entities/user-size"
+import { Sizechart } from "./models/sizechart"
+import { SizechartMeasure } from "./models/sizechart-measure"
+import { SizechartRelevantMeasure } from "./models/sizechart-relevant-measure"
+import { UserSize } from "./models/user-size"
 
 class SizeguideService extends MedusaService({
   Sizechart,
-  SizechartMeasurement,
+  SizechartMeasure,
   SizechartRelevantMeasure,
   UserSize,
 }) {}

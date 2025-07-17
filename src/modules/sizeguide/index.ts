@@ -1,9 +1,9 @@
 import { Module } from "@medusajs/utils"
 import SizeguideService from "./service"
-import { Sizechart } from "./entities/sizechart"
-import { SizechartMeasurement } from "./entities/sizechart-measurement"
-import { SizechartRelevantMeasure } from "./entities/sizechart-relevant-measure"
-import { UserSize } from "./entities/user-size"
+import { Sizechart } from "./models/sizechart"
+import { SizechartMeasure } from "./models/sizechart-measure"
+import { SizechartRelevantMeasure } from "./models/sizechart-relevant-measure"
+import { UserSize } from "./models/user-size"
 
 export const SIZEGUIDE_MODULE = "sizeguide"
 
@@ -17,7 +17,7 @@ const moduleDefinition: any = {
   migrations: [],
   models: [
     Sizechart,
-    SizechartMeasurement,
+    SizechartMeasure,
     SizechartRelevantMeasure,
     UserSize,
   ],
