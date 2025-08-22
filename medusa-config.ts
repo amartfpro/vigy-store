@@ -22,20 +22,28 @@ export default defineConfig({
       options: {},
     },
     {
-    key: Modules.PAYMENT,
-    resolve: "@medusajs/medusa/payment",
-    options: {
-      providers: [
-        {
-          resolve: "@medusajs/medusa/payment-stripe",
-          id: "stripe",
-          options: {
-            apiKey: process.env.STRIPE_API_KEY,
-            webhookSecret: process.env.STRIPE_WEBHOOK_SECRET,
+      key: Modules.PAYMENT,
+      resolve: "@medusajs/medusa/payment",
+      options: {
+        providers: [
+          {
+            resolve: "@medusajs/medusa/payment-stripe",
+            id: "stripe",
+            options: {
+              apiKey: process.env.STRIPE_API_KEY,
+              webhookSecret: process.env.STRIPE_WEBHOOK_SECRET,
+            },
           },
-        },
-      ],
+        ],
+      },
     },
-  },
+    {
+      resolve: "./src/modules/algolia",
+      options: {
+        appId: process.env.ALGOLIA_APP_ID!,
+        apiKey: process.env.ALGOLIA_API_KEY!,
+        productIndexName: process.env.ALGOLIA_PRODUCT_INDEX_NAME!,
+      },
+    },
   ],
 })
