@@ -45,5 +45,16 @@ export default defineConfig({
         productIndexName: process.env.ALGOLIA_PRODUCT_INDEX_NAME!,
       },
     },
+ {
+      key: Modules.EVENT_BUS,
+      resolve: "@medusajs/event-bus-redis",
+      options: { redisUrl: process.env.EVENTS_REDIS_URL! },
+    },
+    {
+      // opcional pero recomendado
+      key: "cacheService",
+      resolve: "@medusajs/cache-redis",
+      options: { redisUrl: process.env.EVENTS_REDIS_URL! },
+    },
   ],
 })

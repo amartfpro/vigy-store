@@ -13,7 +13,7 @@
     "medusa"
   ],
   "scripts": {
-    "build": "medusa build",
+    "build": "cross-env npm run clean && npm run build:server",
     "build:admin": "medusa-admin build --deployment",
     "seed": "medusa exec ./src/scripts/seed.ts",
     "start": "medusa start",
@@ -24,7 +24,9 @@
   },
   "dependencies": {
     "@medusajs/admin-sdk": "^2.8.8",
+    "@medusajs/cache-redis": "^2.8.8",
     "@medusajs/cli": "^2.8.8",
+    "@medusajs/event-bus-redis": "^2.8.8",
     "@medusajs/framework": "2.8.8",
     "@medusajs/inventory": "^2.8.8",
     "@medusajs/medusa": "2.8.8",
