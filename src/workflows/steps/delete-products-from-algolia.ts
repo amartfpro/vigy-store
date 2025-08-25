@@ -5,8 +5,9 @@ import {
 import { ALGOLIA_MODULE } from "../../modules/algolia"
 
 type AlgoliaModuleService = {
-  deleteProducts: (ids: string[]) => Promise<void>
-  upsertProducts?: (records: any[]) => Promise<void>
+  retrieveFromIndex: (ids: string[], index: string) => Promise<Record<string, unknown>[]>
+  deleteFromIndex: (ids: string[], index: string) => Promise<void>
+  indexData: (records: Record<string, unknown>[], index: string) => Promise<void>
 }
 
 export type DeleteProductsFromAlgoliaWorkflow = {
@@ -19,7 +20,7 @@ export const deleteProductsFromAlgoliaStep = createStep(
     { ids }: DeleteProductsFromAlgoliaWorkflow,
     { container }
   ) => {
-    const algoliaModuleService = container.resolve(ALGOLIA_MODULE)
+    const algoliaModuleService = container.resolve(ALGOLIA_MODULE) as AlgoliaModuleService
     
     const existingRecords = await algoliaModuleService.retrieveFromIndex(
       ids, 
@@ -32,7 +33,7 @@ export const deleteProductsFromAlgoliaStep = createStep(
 
     return new StepResponse(undefined, existingRecords)
   },
-  async (existingRecords, { container }) => {
+  async (existingRecords: Record<string, unknown>[] | undefined, { container }) => {
     if (!existingRecords) {
       return
     }
