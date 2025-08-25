@@ -13,8 +13,7 @@
     "medusa"
   ],
   "scripts": {
-    "build": "npm run clean && npm run build:server",
-    "build:admin": "medusa-admin build --deployment",
+    "build": "tsc",
     "seed": "medusa exec ./src/scripts/seed.ts",
     "start": "medusa start",
     "dev": "medusa develop",
@@ -23,7 +22,6 @@
     "test:unit": "TEST_TYPE=unit NODE_OPTIONS=--experimental-vm-modules jest --silent --runInBand --forceExit"
   },
   "dependencies": {
-    "@medusajs/admin": "^7.1.18",
     "@medusajs/admin-sdk": "^2.8.8",
     "@medusajs/cache-redis": "^2.8.8",
     "@medusajs/cli": "^2.8.8",

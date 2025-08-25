@@ -59,13 +59,5 @@ export default defineConfig({
       resolve: "@medusajs/cache-redis",
       options: { redisUrl: process.env.EVENTS_REDIS_URL! },
     },
-  ],
-  plugins: [
-    {
-      resolve: "@medusajs/admin",
-      options: {
-        autoRebuild: true,
-      },
-    },
   ]
 })
