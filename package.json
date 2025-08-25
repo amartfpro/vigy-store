@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "predeploy": "medusa db:migrate",
-    "build": "tsc",
+    "build": "medusa build",
     "seed": "medusa exec ./src/scripts/seed.ts",
     "start": "medusa start",
     "dev": "medusa develop",
