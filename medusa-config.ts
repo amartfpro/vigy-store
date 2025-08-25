@@ -6,9 +6,6 @@ export default defineConfig({
   projectConfig: {
     databaseUrl: process.env.DATABASE_URL,
     workerMode: process.env.MEDUSA_WORKER_MODE as "shared" | "worker" | "server",
-    admin: {
-      disable: process.env.DISABLE_MEDUSA_ADMIN === "true",
-    },
     redisUrl: process.env.REDIS_URL,
     http: {
       storeCors: process.env.STORE_CORS!,
@@ -17,6 +14,10 @@ export default defineConfig({
       jwtSecret: process.env.JWT_SECRET || "supersecret",
       cookieSecret: process.env.COOKIE_SECRET || "supersecret",
     }
+  },
+  admin: {
+      disable: process.env.DISABLE_MEDUSA_ADMIN === "true",
+      backendUrl: process.env.MEDUSA_BACKEND_URL,
   },
   modules: [
     {

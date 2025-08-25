@@ -4,6 +4,11 @@ import {
 } from "@medusajs/framework/workflows-sdk"
 import { ALGOLIA_MODULE } from "../../modules/algolia"
 
+type AlgoliaModuleService = {
+  deleteProducts: (ids: string[]) => Promise<void>
+  upsertProducts?: (records: any[]) => Promise<void>
+}
+
 export type DeleteProductsFromAlgoliaWorkflow = {
   ids: string[]
 }
