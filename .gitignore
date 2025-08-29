@@ -1,8 +1,9 @@
 /dist
+.env.borr
 .env
 .env.pre
 .env.pro
-.env.borrador
+
 .DS_Store
 /uploads
 /node_modules
