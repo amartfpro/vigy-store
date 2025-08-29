@@ -21,13 +21,10 @@
     "test:integration:http": "TEST_TYPE=integration:http NODE_OPTIONS=--experimental-vm-modules jest --silent=false --runInBand --forceExit",
     "test:integration:modules": "TEST_TYPE=integration:modules NODE_OPTIONS=--experimental-vm-modules jest --silent --runInBand --forceExit",
     "test:unit": "TEST_TYPE=unit NODE_OPTIONS=--experimental-vm-modules jest --silent --runInBand --forceExit",
-
     "start:pre": "dotenv -e .env.pre -- cross-env NODE_ENV=development medusa start",
     "start:pro": "dotenv -e .env.pro -- cross-env NODE_ENV=production medusa start",
-
     "migrate:pre": "dotenv -e .env.pre -- medusa db:migrate",
     "migrate:pro": "dotenv -e .env.pro -- medusa db:migrate",
-
     "seed:pre": "dotenv -e .env.pre -- medusa seed -f ./data/seed.json"
   },
   "dependencies": {
@@ -60,6 +57,7 @@
     "@types/react": "^18.3.2",
     "@types/react-dom": "^18.2.25",
     "cross-env": "^10.0.0",
+    "dotenv-cli": "^10.0.0",
     "jest": "^29.7.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
