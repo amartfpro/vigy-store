@@ -22,6 +22,10 @@ Este repositorio contiene el backend de VIGY, basado en MedusaJS, un framework d
 </p>
 
 <p align="center">
+Este backend está diseñado para integrarse completamente con el frontend de VIGY Storefront, que puedes consultar en el repositorio [vigy-storefront](https://github.com/amartfpro/vigy-storefront).
+</p>
+
+<p align="center">
   <a href="https://github.com/amartfpro/vigy-store">
     <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat" alt="PRs welcome!"/>
   </a>
