@@ -2,8 +2,8 @@
 <p align="center">
   <a href="https://www.vigy.com">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="public/images/logo-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="public/images/logo-light.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="src/public/logo-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="src/public/logo-light.svg">
     <img alt="VIGY Logo" src="public/images/logo-light.svg" width="150">
     </picture>
   </a>
