@@ -1,6 +1,6 @@
 
 <p align="center">
-  <a href="[https://www.vigy.com](https://vigy-store-production.up.railway.app]">
+  <a href="https://vigy-storefront.vercel.app/es">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="src/public/logo-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="src/public/logo-light.svg">
