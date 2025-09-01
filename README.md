@@ -1,66 +1,135 @@
-<<<<<<< HEAD
-# vigy-store
-=======
+
 <p align="center">
-  <a href="https://www.medusajs.com">
+  <a href="https://www.vigy.com">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/59018053/229103275-b5e482bb-4601-46e6-8142-244f531cebdb.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/59018053/229103726-e5b529a3-9b3f-4970-8a1f-c6af37f087bf.svg">
-    <img alt="Medusa logo" src="https://user-images.githubusercontent.com/59018053/229103726-e5b529a3-9b3f-4970-8a1f-c6af37f087bf.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="public/images/logo-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="public/images/logo-light.svg">
+    <img alt="VIGY Logo" src="public/images/logo-light.svg" width="150">
     </picture>
   </a>
 </p>
+
 <h1 align="center">
-  Medusa
+  VIGY Backend
 </h1>
 
-<h4 align="center">
-  <a href="https://docs.medusajs.com">Documentation</a> |
-  <a href="https://www.medusajs.com">Website</a>
-</h4>
-
 <p align="center">
-  Building blocks for digital commerce
-</p>
-<p align="center">
-  <a href="https://github.com/medusajs/medusa/blob/master/CONTRIBUTING.md">
-    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat" alt="PRs welcome!" />
-  </a>
-    <a href="https://www.producthunt.com/posts/medusa"><img src="https://img.shields.io/badge/Product%20Hunt-%231%20Product%20of%20the%20Day-%23DA552E" alt="Product Hunt"></a>
-  <a href="https://discord.gg/xpCwq3Kfn8">
-    <img src="https://img.shields.io/badge/chat-on%20discord-7289DA.svg" alt="Discord Chat" />
-  </a>
-  <a href="https://twitter.com/intent/follow?screen_name=medusajs">
-    <img src="https://img.shields.io/twitter/follow/medusajs.svg?label=Follow%20@medusajs" alt="Follow @medusajs" />
-  </a>
+VIGY es una marca de moda fundada por Valentín González y Ángel Martínez, dos jóvenes leoneses con una visión clara: crear prendas que fusionen la estética deportiva vintage con la versatilidad moderna. Cada colección está diseñada para personas que buscan autenticidad, calidad y comodidad en su vestimenta. Ya sea para el día a día o para ocasiones especiales, estas están creadas para ofrecer lo mejor en estilo y confort.
 </p>
 
-## Compatibility
+<p align="center">
+Este repositorio contiene el backend de VIGY, basado en MedusaJS, un framework de comercio para construir aplicaciones de comercio electrónico de alto rendimiento.
+</p>
 
-This starter is compatible with versions >= 2 of `@medusajs/medusa`. 
+<p align="center">
+Este backend está diseñado para integrarse completamente con el frontend de VIGY Storefront, que puedes consultar en el repositorio [vigy-storefront](https://github.com/amartfpro/vigy-storefront).
+</p>
 
-## Getting Started
+<p align="center">
+  <a href="https://github.com/amartfpro/vigy-store">
+    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat" alt="PRs welcome!"/>
+  </a>
+  <a href="https://instagram.com/vigysport">
+    <img src="https://img.shields.io/badge/Instagram-%40vigysport-4c7d7e.svg" alt="Follow @vigysport on Instagram" />
+  </a>
+</p>
 
-Visit the [Quickstart Guide](https://docs.medusajs.com/learn/installation) to set up a server.
+## Características
 
-Visit the [Docs](https://docs.medusajs.com/learn/installation#get-started) to learn more about our system requirements.
+- **Backend de MedusaJS**: Utiliza **MedusaJS** para la gestión de productos, inventario, pedidos, pagos, y más.
+  
+- **Soporte para pagos con Stripe**: Integración con **Stripe** para realizar pagos seguros y fáciles a través de la tienda online.
 
-## What is Medusa
+- **Búsqueda avanzada con Algolia**: Implementación de **Algolia** para permitir búsquedas rápidas y precisas dentro del catálogo de productos.
 
-Medusa is a set of commerce modules and tools that allow you to build rich, reliable, and performant commerce applications without reinventing core commerce logic. The modules can be customized and used to build advanced ecommerce stores, marketplaces, or any product that needs foundational commerce primitives. All modules are open-source and freely available on npm.
+- **Escalabilidad y personalización**: El backend está diseñado para ser altamente escalable y personalizable para adaptarse a las necesidades de **VIGY** y otros posibles proyectos de ecommerce.
 
-Learn more about [Medusa’s architecture](https://docs.medusajs.com/learn/introduction/architecture) and [commerce modules](https://docs.medusajs.com/learn/fundamentals/modules/commerce-modules) in the Docs.
+- **Autenticación y gestión de usuarios**: Incluye una gestión robusta de usuarios y roles, permitiendo a los administradores gestionar productos y pedidos de manera eficiente.
 
-## Community & Contributions
+- **Soporte para múltiples regiones y monedas**: El sistema está preparado para funcionar en diferentes regiones y soportar múltiples monedas.
 
-The community and core team are available in [GitHub Discussions](https://github.com/medusajs/medusa/discussions), where you can ask for support, discuss roadmap, and share ideas.
+- **Completamente open-source**: Todos los módulos están disponibles como código abierto y pueden ser modificados según las necesidades.
 
-Join our [Discord server](https://discord.com/invite/medusajs) to meet other community members.
+## Estructura del Proyecto
 
-## Other channels
+```
+/src                     - Contiene la lógica principal del backend
+  /controllers            - Controladores para manejar las rutas de la API
+  /services               - Servicios que implementan la lógica de negocio
+  /models                 - Modelos para la base de datos
+  /routes                 - Rutas de la API y sus controladores
+  /utils                  - Utilidades compartidas, como validadores y helpers
+/config                   - Archivos de configuración de la aplicación
+  /database               - Configuración de la base de datos (PostgreSQL)
+  /medusa                 - Configuración de MedusaJS
+  /stripe                 - Configuración de la integración de Stripe
+  /algolia                - Configuración de la integración de Algolia
+```
 
-- [GitHub Issues](https://github.com/medusajs/medusa/issues)
-- [Twitter](https://twitter.com/medusajs)
-- [LinkedIn](https://www.linkedin.com/company/medusajs)
-- [Medusa Blog](https://medusajs.com/blog/)
->>>>>>> 9cf4287 (Initial commit backend)
+## Instalación
+
+### Requisitos previos
+
+1. **Node.js** >= 16.0.0
+2. **npm** >= 8.0.0
+3. **PostgreSQL**: Asegúrate de tener PostgreSQL instalado y configurado para la base de datos.
+4. **Stripe**: Necesitarás una cuenta de **Stripe** para la integración de pagos. Obtén tus claves API de [Stripe](https://stripe.com).
+5. **Algolia**: Si vas a usar **Algolia** para la búsqueda avanzada, necesitarás las claves API de [Algolia](https://www.algolia.com/).
+6. **Editor de código**: Se recomienda usar **Visual Studio Code** o cualquier editor compatible con JavaScript/TypeScript.
+
+### Clonación del repositorio
+
+```bash
+git clone https://github.com/amartfpro/vigy-store.git
+cd vigy-store
+```
+
+### Instalación de dependencias
+
+```bash
+npm install
+```
+
+### Configuración de entorno
+
+Crea un archivo `.env` en la raíz del proyecto y agrega tus variables de entorno:
+
+```env
+# Medusa Configuration
+MEDUSA_BACKEND_URL=<URL_de_tu_backend>
+MEDUSA_API_TOKEN=<API_token_de_medusa>
+
+# PostgreSQL Configuration
+DATABASE_URL=postgres://usuario:contraseña@localhost:5432/tu_basededatos
+
+# Stripe Configuration
+STRIPE_API_KEY=<tu_clave_api_de_stripe>
+
+# Algolia Configuration
+ALGOLIA_API_KEY=<tu_clave_api_de_algolia>
+ALGOLIA_APP_ID=<tu_app_id_de_algolia>
+
+# Otros servicios adicionales
+```
+
+### Ejecución del servidor
+
+```bash
+npm run dev
+```
+
+El servidor se ejecutará en el puerto **9000** de manera predeterminada. Accede a la API de Medusa en `http://localhost:9000`.
+
+## Despliegue
+
+Este backend está optimizado para ser desplegado en Railway. Para hacerlo, simplemente vincula tu repositorio con el servicio de despliegue y configura las variables de entorno adecuadas.
+
+## Contribuciones
+
+Se ha realizado un primer sprint, dando lugar a un VMP. Se considera realizar un segundo sprint para aumentar las funcionalidades
+y mejorar la experiencia del cliente además de seguir personalizando el servicio con la estética y valores de la marca.
+Este proyecto está en constante evolución y las contribuciones son bienvenidas. Si tienes alguna mejora o corrección, por favor abre un **issue** o un **pull request**. Estamos comprometidos a mejorar continuamente el backend de **VIGY** y te agradecemos encarecidamente por cualquier aporte.
+
+## Licencia
+
+Este proyecto está bajo la **Licencia MIT**. Para más detalles, consulta el archivo [LICENSE](./LICENSE).
